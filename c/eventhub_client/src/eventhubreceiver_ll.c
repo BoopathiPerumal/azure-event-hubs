@@ -1220,7 +1220,7 @@ static int ProcessMessageAnnotations(MESSAGE_HANDLE message, EVENTDATA_HANDLE ev
                                 LogError("Could not get UTC timestamp. Code:%u\r\n", errorCode);
                                 result = __LINE__;
                             }
-                            else if ((errorCode = EventData_SetEnqueuedTimestampUTCInMs(eventDataHandle, timestampUTC)) != EVENTDATA_OK) // value is in ms, convert to sec
+                            else if ((errorCode = EventData_SetEnqueuedTimestampUTCInMs(eventDataHandle, timestampUTC)) != EVENTDATA_OK)
                             {
                                 LogError("Could not set UTC timestamp in event data. Code:%u\r\n", errorCode);
                                 result = __LINE__;
